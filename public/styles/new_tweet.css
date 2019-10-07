@@ -1,0 +1,30 @@
+.new-tweet {
+  padding-top: 5px;
+}
+
+input {
+  background-color: #4152a1;
+  color: white;
+  font-family: 'Bungee',
+    cursive;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid black;
+  width: 100%;
+}
+
+.counter {
+  float: right;
+}
+
+::placeholder {
+  padding: 10px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
