@@ -1,0 +1,22 @@
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 4px solid black;
+}
+
+article {
+  margin-top: 40px;
+  padding: 10px;
+  border: 4px solid black;
+}
+article p {
+  padding-left: 10px;
+}
