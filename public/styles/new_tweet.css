@@ -8,7 +8,12 @@ input {
   font-family: 'Bungee',
     cursive;
 }
-
+.counter.red {
+  color: red;
+}
+.counter.grey {
+  color: #545149;
+}
 textarea {
   background: transparent;
   border: none;
