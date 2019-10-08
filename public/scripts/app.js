@@ -74,4 +74,16 @@ const renderTweets = function(tweets) {
 $(document).ready(function() {
   // api calls
   renderTweets(data);
+  //AJAX handler
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize(),
+      success: function(data) {
+        console.log(data);
+      }
+    });
+  });
 });
