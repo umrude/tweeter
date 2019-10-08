@@ -31,12 +31,12 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-body>main {
+body > main {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-main>* {
+main > * {
   width: 90%;
 }
