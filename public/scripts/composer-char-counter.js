@@ -12,5 +12,4 @@ $(document).ready(function() {
       count.html(textRemaining).addClass('red');
     }
   });
-
 });
