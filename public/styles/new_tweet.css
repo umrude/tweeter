@@ -8,21 +8,11 @@ input {
   font-family: 'Bungee',
     cursive;
 }
-.counter.red {
-  color: red;
-}
-.counter.grey {
-  color: #545149;
-}
 textarea {
   background: transparent;
   border: none;
   border-bottom: 4px solid black;
   width: 100%;
-}
-
-.counter {
-  float: right;
 }
 
 ::placeholder {
@@ -32,4 +22,16 @@ textarea {
 textarea:focus,
 input:focus {
   outline: none;
+}
+
+.counter {
+  float: right;
+}
+
+.counter.red {
+  color: red;
+}
+
+.counter.grey {
+  color: #545149;
 }

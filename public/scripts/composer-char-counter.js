@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(document).ready(function() {
   let counter = document.getElementsByClassName("counter")[0].innerHTML;
   $("textarea").keyup(() => {
