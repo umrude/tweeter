@@ -60,16 +60,25 @@ $(document).ready(function() {
   // api calls
   loadTweets();
   //AJAX handler
-  
+
   $("form").on("submit", function(event) {
     event.preventDefault();
-    $.ajax({
-      url: "/tweets",
-      method: "POST",
-      data: $(this).serialize(),
-      success: function(data) {
-        console.log(data);
-      }
-    });
+    let text = $(this).parent().find('textarea');
+    let textLength = $(text).val().length;
+    let textValue = $(text).val();
+    if (textLength > 140) {
+      alert("Tweet too long");
+    } else if (textValue === "") {
+      alert("Tweet is empty");
+    } else {
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: $(this).serialize(),
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    }
   });
 });
