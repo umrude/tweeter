@@ -18,3 +18,15 @@ nav {
   font-family: 'Bungee', cursive;
 
 }
+#newTweet {
+  display: flex;
+  flex-flow: column;
+}
+#arrowDown {
+  color: orange;
+  padding-left: 50%;
+}
+
+#newTweet:hover #arrowDown{
+  transform: translateY(10px);
+}
