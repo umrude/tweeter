@@ -1,7 +1,6 @@
-/*Mobile and Desktop have same CSS */
 
 .new-tweet {
-  margin-top: 35px;
+  margin-top: 30px;
   padding-top: 15px;
 }
 
@@ -37,6 +36,7 @@ input:focus {
 }
 
 #error2long {
+  margin-top:25px;
   border-radius: 25px;
   padding: 5px;
   margin: 25px;
@@ -47,6 +47,7 @@ input:focus {
 }
 
 #errorMuchEmpty {
+  margin-top:25px;
   border-radius: 25px;
   padding: 5px;
   margin: 25px;
@@ -58,3 +59,4 @@ input:focus {
 .hidden {
   display:none;
 }
+

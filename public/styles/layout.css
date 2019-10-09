@@ -66,7 +66,7 @@ body {
 @media only screen and (min-width: 1024px) {
 
   body {
-    padding-top: 145px;
+    padding-top: 120px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -87,8 +87,12 @@ body {
   main {
     flex-grow: 1;
     margin: auto;
-    overflow: hidden;
     max-width: 60%;
+  }
+
+  .container {
+    margin-top: 15px;
+
   }
 
   #fixedButton {
