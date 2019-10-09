@@ -5,7 +5,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+// creates new tweet article
 const createTweetElement = (data) => {
   let avatar = data.user['avatars'];
   let name = data.user['name'];
@@ -21,7 +26,7 @@ const createTweetElement = (data) => {
         <h4 id="username">${username}</h4>
       </header>
 
-      <p id="tweettext">${tweetcontent}</p>
+      <p id="tweettext">${escape(tweetcontent)}</p>
       
       <footer>
         <p id="timestamp"><small>${timestamp}</small></p>
@@ -36,21 +41,38 @@ const createTweetElement = (data) => {
   return newElement;
 };
 
+//loops through all tweets and renders them one by one
 const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  const continer = $('#tweets-container');
+  const container = $('#tweets-container');
   for (let x in tweets) {
-    continer.append(createTweetElement(tweets[x]));
+    container.prepend(createTweetElement(tweets[x]));
   }
 };
 
+//gets tweets from /tweets and renders all of them
 const loadTweets = function() {
   $.ajax('/tweets', {
     method: 'GET',
     success: function(data) {
       renderTweets(data);
+    }
+  });
+};
+
+//for when a new tweet is posted
+const renderNewTweet = function(tweet) {
+  $('#tweets-container').prepend(createTweetElement(tweet));
+};
+
+//gets the new tweet to be rendered on submit click
+const loadNewTweets  = function() {
+  $.ajax('/tweets', {
+    method: 'GET',
+    success: function(data) {
+      renderNewTweet(data[data.length - 1]);
     }
   });
 };
@@ -63,20 +85,21 @@ $(document).ready(function() {
 
   $("form").on("submit", function(event) {
     event.preventDefault();
-    let text = $(this).parent().find('textarea');
-    let textLength = $(text).val().length;
-    let textValue = $(text).val();
-    if (textLength > 140) {
+    let $text = $(this).parent().find('textarea');
+    let $textLength = $($text).val().length;
+    let $textValue = $($text).val();
+    let $data = $(this).serialize();
+    if ($textLength > 140) {
       alert("Tweet too long");
-    } else if (textValue === "") {
+    } else if ($textValue === "") {
       alert("Tweet is empty");
     } else {
       $.ajax({
         url: "/tweets",
         method: "POST",
-        data: $(this).serialize(),
+        data: $data,
         success: function(data) {
-          console.log(data);
+          loadNewTweets();
         }
       });
     }
