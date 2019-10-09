@@ -26,11 +26,12 @@
   #writeTweet {
     display: flex;
     flex-flow: column;
+    font-weight: 300;
   }
 
   #arrowDown {
     color: red;
-    padding-left: 50%;
+    padding-left: 49%;
   }
 
   #writeTweet:hover #arrowDown {
@@ -62,11 +63,15 @@
   #writeTweet {
     display: flex;
     flex-flow: column;
-  }
+    font-weight: 300;
 
+
+  }
   #arrowDown {
+    order: 3;
     color: red;
-    padding-left: 50%;
+    padding-left: 49%;
+
   }
 
   #writeTweet:hover #arrowDown {

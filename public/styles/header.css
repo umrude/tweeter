@@ -14,7 +14,10 @@
   }
 
   header.profile h2 {
+    color: white;
     margin-block-start: 0;
+    font-weight: 300;
+
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -25,17 +28,21 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 25%;
-    height: 25%;
-    margin-right:75px;
+    height: 20%;
+    width: 30%;
+    margin-right:10%;
   }
 
   header.profile img {
+ 
     padding-top: 20px;
   }
 
+
   header.profile h2 {
+    color: white;
     margin-block-start: 0;
+    font-weight: 300;
   }
 }
 

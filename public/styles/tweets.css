@@ -83,6 +83,8 @@
     border: 4px solid #545149;
     opacity: 0.80;
     word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-right: 5px;
   }
 
   article.tweet>* {
@@ -138,6 +140,10 @@
     font-family: 'Source Sans Pro',
       sans-serif;
     font-weight: 400;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+
   }
 
   article:hover #username {
