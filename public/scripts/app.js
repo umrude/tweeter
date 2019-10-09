@@ -20,6 +20,7 @@ const createTweetElement = (data) => {
   let tweetcontent = data.content['text'];
   let time = data["created_at"];
   let timestamp = moment(time).fromNow(); //uses momentJS to turn into human readable format
+  //string literal containing html format to be returned
   const newElement = `
  <article class="tweet">
       <header>
@@ -76,12 +77,14 @@ const loadNewTweets = function() {
   });
 };
 
-
 $(document).ready(function() {
 
   // loads tweets on load
   loadTweets();
   
+  //area to compose tweet is hidden on load
+  $(".new-tweet").slideUp();
+
   //keeps the error messages hidden
   $("#error2long").slideUp();
   $('#errorMuchEmpty').slideUp();
