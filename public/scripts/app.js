@@ -93,17 +93,17 @@ $(document).ready(function() {
     let $textValue = $($text).val();
     let $data = $(this).serialize();
     if ($textLength > 140) {
-      $('#error2long').removeClass('hidden');
+      $('#error2long').removeClass('hidden'); //shows error message
       $('#error2long').slideDown();
     } else if ($textValue === "") {
-      $('#errorMuchEmpty').removeClass('hidden');
+      $('#errorMuchEmpty').removeClass('hidden'); //shows error message
       $('#errorMuchEmpty').slideDown();
     } else {
-      $('#error2long').addClass('hidden');
+      $('#error2long').addClass('hidden'); //makes sure that error messages are hidden on success
       $('#errorMuchEmpty').addClass('hidden');
       $("#error2long").slideUp();
       $('#errorMuchEmpty').slideUp();
-      $($text).val('');
+      $($text).val(''); //clears text area
       $.ajax({
         url: "/tweets",
         method: "POST",
