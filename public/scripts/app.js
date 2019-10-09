@@ -4,8 +4,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-const escape = function (str) {
+//stops XSS attacks
+const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -17,7 +17,7 @@ const createTweetElement = (data) => {
   let username = data.user['handle'];
   let tweetcontent = data.content['text'];
   let time = data["created_at"];
-  let timestamp = moment(time).fromNow();
+  let timestamp = moment(time + 780000).fromNow();
   const newElement = `
  <article class="tweet">
       <header>
@@ -82,7 +82,8 @@ $(document).ready(function() {
   // api calls
   loadTweets();
   //AJAX handler
-
+  $("#error2long").slideUp();
+  $('#errorMuchEmpty').slideUp();
   $("form").on("submit", function(event) {
     event.preventDefault();
     let $text = $(this).parent().find('textarea');
@@ -90,18 +91,43 @@ $(document).ready(function() {
     let $textValue = $($text).val();
     let $data = $(this).serialize();
     if ($textLength > 140) {
-      alert("Tweet too long");
+      $('#error2long').removeClass('hidden');
+      $('#error2long').slideDown();
     } else if ($textValue === "") {
-      alert("Tweet is empty");
+      $('#errorMuchEmpty').removeClass('hidden');
+      $('#errorMuchEmpty').slideDown();
     } else {
+      $('#error2long').addClass('hidden');
+      $('#errorMuchEmpty').addClass('hidden');
+      $("#error2long").slideUp();
+      $('#errorMuchEmpty').slideUp();
       $.ajax({
         url: "/tweets",
         method: "POST",
         data: $data,
-        success: function(data) {
+        success: function() {
           loadNewTweets();
         }
       });
     }
+  });
+
+  $("#writeTweet").click(function() {
+    $(".new-tweet").toggle();
+    $("textarea").focus();
+  });
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('#fixedButton').fadeIn();
+      $('#fixedButton').removeClass('hidden');
+    } else {
+      $('#fixedButton').fadeOut();
+      $('#fixedButton').addClass('hidden');
+    }
+  });
+  $("#fixedButton").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+
   });
 });

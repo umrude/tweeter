@@ -14,11 +14,12 @@ nav {
 
 }
 
+
 #logo {
   font-family: 'Bungee', cursive;
 
 }
-#newTweet {
+#writeTweet {
   display: flex;
   flex-flow: column;
 }
@@ -27,6 +28,6 @@ nav {
   padding-left: 50%;
 }
 
-#newTweet:hover #arrowDown{
+#writeTweet:hover #arrowDown{
   transform: translateY(10px);
 }

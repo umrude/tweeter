@@ -39,6 +39,7 @@ article.tweet footer {
 
 #img{
   margin: auto;
+  margin-right:10px;
   height: 75px;
   width: 75px;
   order: 1;

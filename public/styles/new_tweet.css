@@ -1,4 +1,5 @@
 .new-tweet {
+  margin-top: 35px;
   padding-top: 15px;
 }
 
@@ -13,10 +14,6 @@ textarea {
   border: none;
   border-bottom: 4px solid #545149;
   width: 100%;
-}
-
-::placeholder {
-  padding: 10px;
 }
 
 textarea:focus,
@@ -34,4 +31,27 @@ input:focus {
 
 .counter.grey {
   color: #545149;
+}
+
+#error2long{
+  border-radius: 25px;
+  padding: 5px;
+  margin: 25px;
+  margin-bottom: 25px;
+  border: 4px solid red;
+  text-align: center;
+
+}
+
+#errorMuchEmpty{
+  border-radius: 25px;
+  padding: 5px;
+  margin: 25px;
+  margin-bottom: 25px;
+  border: 4px solid red;
+  text-align: center;
+
+}
+.hidden {
+  display: none;
 }

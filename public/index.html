@@ -37,10 +37,11 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
-    <span id="newTweet">Write new tweet here
+    <span id="writeTweet">Write new tweet here
       <i class="fa fa-angle-double-down" id="arrowDown" aria-hidden="true">
       </i>
     </span>
+
     
 
   </nav>
@@ -56,20 +57,33 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-
+    
+    <span id=error2long class="hidden">
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      Your tweet is too long! 140 MAX
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    </span>
+    <span id=errorMuchEmpty class="hidden">
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      Tweet is much try again, such empty
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    </span>
     <section class="new-tweet">
+      
       <form action="/" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
     </section>
+    
 
     <div id="tweets-container">
     
     </div>
   </main>
-
+  <button id="fixedButton" class="hidden"><i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
+</button>
 </body>
 
 </html>
