@@ -4,36 +4,27 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
-
   <!--Font Awesome-->
   <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
-
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new_tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-
-
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/moment.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  
 </head>
 
 <body>
-
   <!-- Top nav bar (fixed) -->
   <nav>
     <span id="logo">tweeter</span>
@@ -41,12 +32,9 @@
       <i class="fa fa-angle-double-down" id="arrowDown" aria-hidden="true">
       </i>
     </span>
-
-    
-
   </nav>
   <!-- Header bar-->
-  <header class = "profile">
+  <header class="profile">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -54,10 +42,9 @@
       <h2>Your Name</h2>
     </div>
   </header>
-
   <!-- Page-specific (main) content here -->
   <main class="container">
-    
+    <!--Error messages-->
     <span id=error2long class="hidden">
       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
       Your tweet is too long! 140 MAX
@@ -65,25 +52,24 @@
     </span>
     <span id=errorMuchEmpty class="hidden">
       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-      Tweet is much try again, such empty
+      Tweet is empty! Try Again
       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
     </span>
+    <!--New Tweets-->
     <section class="new-tweet">
-      
       <form action="/" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
     </section>
-    
-
+    <!--Div for all tweets-->
     <div id="tweets-container">
-    
     </div>
   </main>
+  <!--Scroll up button-->
   <button id="fixedButton" class="hidden"><i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
-</button>
+  </button>
 </body>
 
 </html>

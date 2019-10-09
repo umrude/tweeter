@@ -4,12 +4,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 //stops XSS attacks
 const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+
 // creates new tweet article
 const createTweetElement = (data) => {
   let avatar = data.user['avatars'];
@@ -17,7 +19,7 @@ const createTweetElement = (data) => {
   let username = data.user['handle'];
   let tweetcontent = data.content['text'];
   let time = data["created_at"];
-  let timestamp = moment(time + 780000).fromNow();
+  let timestamp = moment(time).fromNow(); //uses momentJS to turn into human readable format
   const newElement = `
  <article class="tweet">
       <header>
@@ -43,9 +45,6 @@ const createTweetElement = (data) => {
 
 //loops through all tweets and renders them one by one
 const renderTweets = function(tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   const container = $('#tweets-container');
   for (let x in tweets) {
     container.prepend(createTweetElement(tweets[x]));
@@ -62,7 +61,7 @@ const loadTweets = function() {
   });
 };
 
-//for when a new tweet is posted
+//for when a new tweet is added to /tweets
 const renderNewTweet = function(tweet) {
   $('#tweets-container').prepend(createTweetElement(tweet));
 };
@@ -79,11 +78,14 @@ const loadNewTweets  = function() {
 
 
 $(document).ready(function() {
-  // api calls
+  // loads tweets on load
   loadTweets();
-  //AJAX handler
+  
+  //keeps the error messages hidden
   $("#error2long").slideUp();
   $('#errorMuchEmpty').slideUp();
+
+  //even handler for when the "tweet" button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
     let $text = $(this).parent().find('textarea');
@@ -101,6 +103,7 @@ $(document).ready(function() {
       $('#errorMuchEmpty').addClass('hidden');
       $("#error2long").slideUp();
       $('#errorMuchEmpty').slideUp();
+      $($text).val('');
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -112,11 +115,13 @@ $(document).ready(function() {
     }
   });
 
+  //when writeTweet is clicked, the new tweet area is toggled with the text area in focus
   $("#writeTweet").click(function() {
     $(".new-tweet").toggle();
     $("textarea").focus();
   });
 
+  //event handler for when the "scroll to top" button should appear
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#fixedButton').fadeIn();
@@ -126,8 +131,9 @@ $(document).ready(function() {
       $('#fixedButton').addClass('hidden');
     }
   });
+
+  //event handler for when the "scroll to top" button is clicked
   $("#fixedButton").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
-
   });
 });
