@@ -1,41 +1,38 @@
+/* Default CSS*/
+#writeTweet:hover #arrowDown {
+  transform: translateY(10px);
+}
+#arrowDown {
+  color: red;
+  padding-left: 49%;
+}
+#writeTweet {
+  display: flex;
+  flex-flow: column;
+  font-weight: 300;
+}
+#logo {
+  font-family: 'Bungee', cursive;
+}
+nav {
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  padding: 1.5em;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* non desktop styling */
 @media only screen and (max-width: 1023px) {
-
   nav {
     background-color: #d19600;
     color: #FFFFFF;
     background-image: url("../images/asfalt-dark.png");
-    height: 120px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    padding: 1.5em;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-
-  }
-
-  #logo {
-    font-family: 'Bungee', cursive;
-
-  }
-
-  #writeTweet {
-    display: flex;
-    flex-flow: column;
-    font-weight: 300;
-  }
-
-  #arrowDown {
-    color: red;
-    padding-left: 49%;
-  }
-
-  #writeTweet:hover #arrowDown {
-    transform: translateY(10px);
   }
 }
 
@@ -44,37 +41,10 @@
     background: #4056A1;
     color: #FFFFFF;
     background-image: none;
-    height: 120px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    padding: 1.5em;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
   }
-  #logo {
-    font-family: 'Bungee', cursive;
-
-  }
-
-  #writeTweet {
-    display: flex;
-    flex-flow: column;
-    font-weight: 300;
-
-
-  }
+  
   #arrowDown {
     order: 3;
-    color: red;
-    padding-left: 49%;
-
   }
 
-  #writeTweet:hover #arrowDown {
-    transform: translateY(10px);
-  }
 }

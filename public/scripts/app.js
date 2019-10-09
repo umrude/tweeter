@@ -67,7 +67,7 @@ const renderNewTweet = function(tweet) {
 };
 
 //gets the new tweet to be rendered on submit click
-const loadNewTweets  = function() {
+const loadNewTweets = function() {
   $.ajax('/tweets', {
     method: 'GET',
     success: function(data) {
@@ -78,6 +78,7 @@ const loadNewTweets  = function() {
 
 
 $(document).ready(function() {
+
   // loads tweets on load
   loadTweets();
   
@@ -88,10 +89,12 @@ $(document).ready(function() {
   //even handler for when the "tweet" button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
+
     let $text = $(this).parent().find('textarea');
     let $textLength = $($text).val().length;
     let $textValue = $($text).val();
     let $data = $(this).serialize();
+
     if ($textLength > 140) {
       $('#error2long').removeClass('hidden'); //shows error message
       $('#error2long').slideDown();
@@ -101,7 +104,7 @@ $(document).ready(function() {
     } else {
       $('#error2long').addClass('hidden'); //makes sure that error messages are hidden on success
       $('#errorMuchEmpty').addClass('hidden');
-      $("#error2long").slideUp();
+      $("#error2long").slideUp(); //for animation vs errors just disappearing
       $('#errorMuchEmpty').slideUp();
       $($text).val(''); //clears text area
       $.ajax({

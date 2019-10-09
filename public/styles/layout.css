@@ -33,33 +33,35 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /* mobile CSS */
+/* Default CSS*/
+#fixedButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+/* mobile CSS */
 @media only screen and (max-width: 1023px) {
-  body > main {
+  body>main {
     display: flex;
     align-items: center;
     flex-direction: column;
   }
 
-  main > * {
+  main>* {
     width: 90%;
-  }
-
-  #fixedButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: red;
-    color: white;
   }
 }
 
 
 /*Desktop CSS*/
 @media only screen and (min-width: 1024px) {
+
   body {
     padding-top: 145px;
     display: flex;
@@ -68,8 +70,9 @@ body {
     margin: auto;
     width: 90%;
   }
+
   nav {
-    order:1;
+    order: 1;
     flex-grow: 3
   }
 
@@ -81,20 +84,11 @@ body {
   main {
     flex-grow: 1;
     margin: auto;
-    overflow : hidden;
+    overflow: hidden;
     max-width: 60%;
   }
 
-
   #fixedButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background-color: red;
-    color: white;
     flex-grow: 0;
   }
 

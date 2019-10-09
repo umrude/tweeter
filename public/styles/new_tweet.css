@@ -1,121 +1,61 @@
-@media only screen and (max-width: 1023px) {
-  .new-tweet {
-    margin-top: 35px;
-    padding-top: 15px;
-  }
+/*Mobile and Desktop have same CSS */
 
-  input {
-    background-color: #4152a1;
-    color: white;
-    font-family: 'Bungee',
-      cursive;
-  }
-  textarea {
-    background: transparent;
-    border: none;
-    border-bottom: 4px solid #545149;
-    width: 100%;
-  }
-
-  textarea:focus,
-  input:focus {
-    outline: none;
-  }
-
-  .counter {
-    float: right;
-  }
-
-  .counter.red {
-    color: red;
-  }
-
-  .counter.grey {
-    color: #545149;
-  }
-
-  #error2long{
-    border-radius: 25px;
-    padding: 5px;
-    margin: 25px;
-    margin-bottom: 25px;
-    border: 4px solid red;
-    text-align: center;
-
-  }
-
-  #errorMuchEmpty{
-    border-radius: 25px;
-    padding: 5px;
-    margin: 25px;
-    margin-bottom: 25px;
-    border: 4px solid red;
-    text-align: center;
-
-  }
-  .hidden {
-    display: none;
-  }
+.new-tweet {
+  margin-top: 35px;
+  padding-top: 15px;
 }
 
-@media only screen and (min-width: 1024px) {
-  .new-tweet {
-    margin-top: 35px;
-    padding-top: 15px;
-  }
+input {
+  background-color: #4152a1;
+  color: white;
+  font-family: 'Bungee',
+    cursive;
+}
 
-  input {
-    background-color: #4152a1;
-    color: white;
-    font-family: 'Bungee',
-      cursive;
-  }
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #545149;
+  width: 100%;
+}
 
-  textarea {
-    background: transparent;
-    border: none;
-    border-bottom: 4px solid #545149;
-    width: 100%;
-  }
+textarea:focus,
+input:focus {
+  outline: none;
+}
 
-  textarea:focus,
-  input:focus {
-    outline: none;
-  }
+.counter {
+  float: right;
+}
 
-  .counter {
-    float: right;
-  }
+.counter.red {
+  color: red;
+}
 
-  .counter.red {
-    color: red;
-  }
+.counter.grey {
+  color: #545149;
+}
 
-  .counter.grey {
-    color: #545149;
-  }
+#error2long {
+  border-radius: 25px;
+  padding: 5px;
+  margin: 25px;
+  margin-bottom: 25px;
+  border: 4px solid red;
+  text-align: center;
 
-  #error2long {
-    border-radius: 25px;
-    padding: 5px;
-    margin: 35px;
-    margin-bottom: 25px;
-    border: 4px solid red;
-    text-align: center;
+}
 
-  }
+#errorMuchEmpty {
+  border-radius: 25px;
+  padding: 5px;
+  margin: 25px;
+  margin-bottom: 25px;
+  border: 4px solid red;
+  text-align: center;
 
-  #errorMuchEmpty {
-    border-radius: 25px;
-    padding: 5px;
-    margin: 35px;
-    margin-bottom: 25px;
-    border: 4px solid red;
-    text-align: center;
+}
 
-  }
-
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
 }

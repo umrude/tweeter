@@ -1,149 +1,86 @@
-@media only screen and (max-width: 1023px) {
-  article {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 25px;
-    border: 4px solid #545149;
-    opacity: 0.80;
-    word-wrap: break-word;
-  }
-
-  article.tweet > * {
-    padding-left: 20px;
-  }
-
-  article.tweet header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-  }
-
-  article.tweet footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 4px solid #545149;
-    font-family: 'Source Sans Pro',
-    sans-serif;
-    font-weight: 300;
-  }
-
-  #username {
-    font-family: 'Source Sans Pro',
-    sans-serif;
-    font-weight: 300;
-    color:transparent;
-    text-align: right;
-    order: 3;
-    flex-grow: 3;
-  }
-
-  #img{
-    margin: auto;
-    margin-right:10px;
-    height: 75px;
-    width: 75px;
-    order: 1;
-    flex-grow: 0;
-  }
-
-  #name{
-    font-family: 'Source Sans Pro',
-    sans-serif;
-    font-weight: 300;
-    margin: auto;
-    order:1;
-    flex-grow: 1
-  }
-
-  #tweettext {
-    font-family: 'Source Sans Pro',
-    sans-serif;
-    font-weight: 400;
-  }
-
-  article:hover #username {
-    color: #C5CBE3;
-  }
-  article:hover {
-    box-shadow: 5px 5px 0 #C5CBE3;
-    opacity: 1;
-  }
-
-  article i {
-    color: #4056A1;
-  }
+/* Default CSS*/
+article {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 25px;
+  border: 4px solid #545149;
+  opacity: 0.80;
+  word-wrap: break-word;
 }
+
+article.tweet > * {
+  padding-left: 20px;
+}
+
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 4px solid #545149;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+#username {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: transparent;
+  text-align: right;
+  order: 3;
+  flex-grow: 3;
+}
+
+#img {
+  margin: auto;
+  margin-right: 10px;
+  height: 75px;
+  width: 75px;
+  order: 1;
+  flex-grow: 0;
+}
+
+#name {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  margin: auto;
+  order: 1;
+  flex-grow: 1
+}
+
+#tweettext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+article:hover #username {
+  color: #C5CBE3;
+}
+
+article:hover {
+  box-shadow: 5px 5px 0 #C5CBE3;
+  opacity: 1;
+}
+
+article i {
+  color: #4056A1;
+}
+
+
 @media only screen and (min-width: 1024px) {
   article {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 25px;
-    border: 4px solid #545149;
-    opacity: 0.80;
-    word-wrap: break-word;
     overflow-wrap: break-word;
     margin-right: 5px;
   }
 
-  article.tweet>* {
-    padding-left: 20px;
-  }
-
-  article.tweet header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-  }
-
-  article.tweet footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 4px solid #545149;
-    font-family: 'Source Sans Pro',
-      sans-serif;
-    font-weight: 300;
-  }
-
-  #username {
-    font-family: 'Source Sans Pro',
-      sans-serif;
-    font-weight: 300;
-    color: transparent;
-    text-align: right;
-    order: 3;
-    flex-grow: 3;
-  }
-
-  #img {
-    margin: auto;
-    margin-right: 10px;
-    height: 75px;
-    width: 75px;
-    order: 1;
-    flex-grow: 0;
-  }
-
-  #name {
-    font-family: 'Source Sans Pro',
-      sans-serif;
-    font-weight: 300;
-    margin: auto;
-    order: 1;
-    flex-grow: 1
-  }
-
   #tweettext {
-    font-family: 'Source Sans Pro',
-      sans-serif;
-    font-weight: 400;
     word-wrap: break-word;
     overflow-wrap: break-word;
-
-
   }
 
   article:hover #username {
