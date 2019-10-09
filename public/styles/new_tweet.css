@@ -1,57 +1,121 @@
-.new-tweet {
-  margin-top: 35px;
-  padding-top: 15px;
+@media only screen and (max-width: 1023px) {
+  .new-tweet {
+    margin-top: 35px;
+    padding-top: 15px;
+  }
+
+  input {
+    background-color: #4152a1;
+    color: white;
+    font-family: 'Bungee',
+      cursive;
+  }
+  textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #545149;
+    width: 100%;
+  }
+
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+
+  .counter {
+    float: right;
+  }
+
+  .counter.red {
+    color: red;
+  }
+
+  .counter.grey {
+    color: #545149;
+  }
+
+  #error2long{
+    border-radius: 25px;
+    padding: 5px;
+    margin: 25px;
+    margin-bottom: 25px;
+    border: 4px solid red;
+    text-align: center;
+
+  }
+
+  #errorMuchEmpty{
+    border-radius: 25px;
+    padding: 5px;
+    margin: 25px;
+    margin-bottom: 25px;
+    border: 4px solid red;
+    text-align: center;
+
+  }
+  .hidden {
+    display: none;
+  }
 }
 
-input {
-  background-color: #4152a1;
-  color: white;
-  font-family: 'Bungee',
-    cursive;
-}
-textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 4px solid #545149;
-  width: 100%;
-}
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: 35px;
+    padding-top: 15px;
+  }
 
-textarea:focus,
-input:focus {
-  outline: none;
-}
+  input {
+    background-color: #4152a1;
+    color: white;
+    font-family: 'Bungee',
+      cursive;
+  }
 
-.counter {
-  float: right;
-}
+  textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 4px solid #545149;
+    width: 100%;
+  }
 
-.counter.red {
-  color: red;
-}
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
 
-.counter.grey {
-  color: #545149;
-}
+  .counter {
+    float: right;
+  }
 
-#error2long{
-  border-radius: 25px;
-  padding: 5px;
-  margin: 25px;
-  margin-bottom: 25px;
-  border: 4px solid red;
-  text-align: center;
+  .counter.red {
+    color: red;
+  }
 
-}
+  .counter.grey {
+    color: #545149;
+  }
 
-#errorMuchEmpty{
-  border-radius: 25px;
-  padding: 5px;
-  margin: 25px;
-  margin-bottom: 25px;
-  border: 4px solid red;
-  text-align: center;
+  #error2long {
+    border-radius: 25px;
+    padding: 5px;
+    margin: 35px;
+    margin-bottom: 25px;
+    border: 4px solid red;
+    text-align: center;
 
-}
-.hidden {
-  display: none;
+  }
+
+  #errorMuchEmpty {
+    border-radius: 25px;
+    padding: 5px;
+    margin: 35px;
+    margin-bottom: 25px;
+    border: 4px solid red;
+    text-align: center;
+
+  }
+
+  .hidden {
+    display: none;
+  }
 }

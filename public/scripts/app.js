@@ -117,7 +117,7 @@ $(document).ready(function() {
 
   //when writeTweet is clicked, the new tweet area is toggled with the text area in focus
   $("#writeTweet").click(function() {
-    $(".new-tweet").toggle();
+    $(".new-tweet").slideToggle();
     $("textarea").focus();
   });
 

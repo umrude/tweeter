@@ -1,33 +1,75 @@
-nav {
-  background: #4056A1;
-  color: #FFFFFF;
-  height: 120px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  padding: 1.5em;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
+/* non desktop styling */
+@media only screen and (max-width: 1023px) {
 
+  nav {
+    background-color: #d19600;
+    color: #FFFFFF;
+    background-image: url("../images/asfalt-dark.png");
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    padding: 1.5em;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  #logo {
+    font-family: 'Bungee', cursive;
+
+  }
+
+  #writeTweet {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #arrowDown {
+    color: red;
+    padding-left: 50%;
+  }
+
+  #writeTweet:hover #arrowDown {
+    transform: translateY(10px);
+  }
 }
 
+@media only screen and (min-width: 1024px) {
+  nav {
+    background: #4056A1;
+    color: #FFFFFF;
+    background-image: none;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    padding: 1.5em;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #logo {
+    font-family: 'Bungee', cursive;
 
-#logo {
-  font-family: 'Bungee', cursive;
+  }
 
-}
-#writeTweet {
-  display: flex;
-  flex-flow: column;
-}
-#arrowDown {
-  color: orange;
-  padding-left: 50%;
-}
+  #writeTweet {
+    display: flex;
+    flex-flow: column;
+  }
 
-#writeTweet:hover #arrowDown{
-  transform: translateY(10px);
+  #arrowDown {
+    color: red;
+    padding-left: 50%;
+  }
+
+  #writeTweet:hover #arrowDown {
+    transform: translateY(10px);
+  }
 }

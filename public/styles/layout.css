@@ -33,27 +33,66 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-body > main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+ /* mobile CSS */
+@media only screen and (max-width: 1023px) {
 
-main > * {
-  width: 90%;
-}
+  body > main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-#fixedButton {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-}
+  main > * {
+    width: 90%;
+  }
 
-.hidden {
-  display: none
+  #fixedButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+  }
+}
+/*Desktop CSS*/
+@media only screen and (min-width: 1024px) {
+  body {
+    padding-top: 145px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+  }
+  nav {
+    order:1;
+    flex-grow: 3
+  }
+
+  header.profile {
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+
+  main {
+    margin: auto;
+    flex-grow: 1
+  }
+
+
+  #fixedButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    flex-grow: 0;
+  }
+
 }
