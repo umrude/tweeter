@@ -13,14 +13,14 @@
   animation-direction: alternate;
   animation-iteration-count: infinite;
   color: red;
-  padding-left: 49%;
+  padding-left: 45%;
 }
 #writeTweet {
   display: flex;
   flex-flow: column;
   font-weight: 300;
   background-color: transparent;
-  border:none;
+  border: none;
   color: white;
   outline:none;
 }
