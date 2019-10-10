@@ -62,7 +62,7 @@ const loadTweets = function() {
   });
 };
 
-//for when a new tweet is added to /tweets
+//prepends new tweet to list of tweets
 const renderNewTweet = function(tweet) {
   $('#tweets-container').prepend(createTweetElement(tweet));
 };
@@ -89,7 +89,7 @@ $(document).ready(function() {
   $("#error2long").slideUp();
   $('#errorMuchEmpty').slideUp();
 
-  //even handler for when the "tweet" button is clicked
+  //event handler for when the "tweet" button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
 
