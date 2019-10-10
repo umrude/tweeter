@@ -82,13 +82,11 @@ $(document).ready(function() {
   // loads tweets on load
   loadTweets();
   
+  $('#error2long').slideUp();
+  $('#errorMuchEmpty').slideUp();
   //area to compose tweet is hidden on load
   $(".new-tweet").slideUp();
-
-  //keeps the error messages hidden
-  $("#error2long").slideUp();
-  $('#errorMuchEmpty').slideUp();
-
+  
   //event handler for when the "tweet" button is clicked
   $("form").on("submit", function(event) {
     event.preventDefault();
@@ -99,11 +97,11 @@ $(document).ready(function() {
     let $data = $(this).serialize();
 
     if ($textLength > 140) {
-      $('#error2long').removeClass('hidden'); //shows error message
       $('#error2long').slideDown();
+
     } else if ($textValue === "") {
-      $('#errorMuchEmpty').removeClass('hidden'); //shows error message
       $('#errorMuchEmpty').slideDown();
+
     } else {
       $('#error2long').addClass('hidden'); //makes sure that error messages are hidden on success
       $('#errorMuchEmpty').addClass('hidden');
