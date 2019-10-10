@@ -110,6 +110,7 @@ $(document).ready(function() {
       $("#error2long").slideUp(); //for animation vs errors just disappearing
       $('#errorMuchEmpty').slideUp();
       $($text).val(''); //clears text area
+      $('.counter').html("140"); //resets char counter
       $.ajax({
         url: "/tweets",
         method: "POST",
