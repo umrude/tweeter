@@ -43,6 +43,7 @@ body {
   border-radius: 50%;
   background-color: red;
   color: white;
+  outline: none;
 }
 .hidden {
   display:none;
