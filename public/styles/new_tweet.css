@@ -24,6 +24,8 @@ input:focus {
 }
 
 .counter {
+  font-family: 'Bungee',
+  cursive;
   float: right;
 }
 
