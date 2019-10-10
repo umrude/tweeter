@@ -71,7 +71,7 @@ article i {
   color: #4056A1;
 }
 
-
+/*desktop CSS*/
 @media only screen and (min-width: 1024px) {
   article {
     overflow-wrap: break-word;
@@ -83,16 +83,4 @@ article i {
     overflow-wrap: break-word;
   }
 
-  article:hover #username {
-    color: #C5CBE3;
-  }
-
-  article:hover {
-    box-shadow: 5px 5px 0 #C5CBE3;
-    opacity: 1;
-  }
-
-  article i {
-    color: #4056A1;
-  }
 }
