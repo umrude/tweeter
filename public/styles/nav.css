@@ -19,6 +19,10 @@
   display: flex;
   flex-flow: column;
   font-weight: 300;
+  background-color: transparent;
+  border:none;
+  color: white;
+  outline:none;
 }
 #logo {
   font-family: 'Bungee', cursive;
