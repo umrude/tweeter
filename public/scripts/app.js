@@ -82,8 +82,10 @@ $(document).ready(function() {
   // loads tweets on load
   loadTweets();
   
+  //errors hidden on load
   $('#error2long').slideUp();
   $('#errorMuchEmpty').slideUp();
+
   //area to compose tweet is hidden on load
   $(".new-tweet").slideUp();
   
@@ -97,8 +99,10 @@ $(document).ready(function() {
     let $data = $(this).serialize();
 
     if ($textLength > 140) {
+      $('#errorMuchEmpty').slideUp(); //errors don't overlap
       $('#error2long').slideDown();
     } else if ($textValue === "") {
+      $('#error2long').slideUp();
       $('#errorMuchEmpty').slideDown();
     } else {
       $("#error2long").slideUp(); //for animation vs errors just disappearing
