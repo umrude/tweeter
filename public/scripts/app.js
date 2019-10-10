@@ -98,13 +98,9 @@ $(document).ready(function() {
 
     if ($textLength > 140) {
       $('#error2long').slideDown();
-
     } else if ($textValue === "") {
       $('#errorMuchEmpty').slideDown();
-
     } else {
-      $('#error2long').addClass('hidden'); //makes sure that error messages are hidden on success
-      $('#errorMuchEmpty').addClass('hidden');
       $("#error2long").slideUp(); //for animation vs errors just disappearing
       $('#errorMuchEmpty').slideUp();
       $($text).val(''); //clears text area
